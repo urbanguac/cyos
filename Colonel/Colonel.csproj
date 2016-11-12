@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B70A4B5C-B617-4D4E-AE17-9CF9D5BBBF63}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Colonel</RootNamespace>
+    <AssemblyName>Colonel</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Cosmos.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5ae71220097cb983, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Cosmos\Cosmos\Users\Sentinel\SentinelSystem\bin\Debug\Cosmos.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Cosmos.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5ae71220097cb983, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Cosmos\Cosmos\source\Cosmos.Core\bin\x86\Debug\Cosmos.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Cosmos.HAL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5ae71220097cb983, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Cosmos\Cosmos\source\Cosmos.HAL\bin\x86\Debug\Cosmos.HAL.dll</HintPath>
+    </Reference>
+    <Reference Include="Cosmos.Hardware">
+      <HintPath>..\..\..\..\..\Cosmos\Cosmos\source2\Kernel\System\Hardware\Cosmos.Hardware\bin\Debug\Cosmos.Hardware.dll</HintPath>
+    </Reference>
+    <Reference Include="Cosmos.Hardware2">
+      <HintPath>..\..\..\..\..\Cosmos\Cosmos\source\Unused\Cosmos.Hardware\bin\Debug\Cosmos.Hardware2.dll</HintPath>
+    </Reference>
+    <Reference Include="Cosmos.System, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5ae71220097cb983, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Cosmos\Cosmos\source\Cosmos.System\bin\Debug\Cosmos.System.dll</HintPath>
+    </Reference>
+    <Reference Include="SentinelSystem, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Cosmos\Cosmos\Users\Sentinel\SentinelSystem\bin\Debug\SentinelSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CyDrivers\Filesystem\Directory\CyDirectory.cs" />
+    <Compile Include="CyDrivers\Filesystem\File\CyFile.cs" />
+    <Compile Include="CyDrivers\Filesystem\Lifetree.cs" />
+    <Compile Include="CyDrivers\Graphics\CyGraphics.cs" />
+    <Compile Include="CyDrivers\Networking\Ekosystem.cs" />
+    <Compile Include="CyDrivers\Tools\Editor.cs" />
+    <Compile Include="CyDrivers\Tools\Helper.cs" />
+    <Compile Include="CyDrivers\Tools\IterateAndPrint.cs" />
+    <Compile Include="CyDrivers\Tools\Parser.cs" />
+    <Compile Include="CyDrivers\Tools\Sound.cs" />
+    <Compile Include="CyDrivers\Tools\Time.cs" />
+    <Compile Include="Games\GameHandle.cs" />
+    <Compile Include="Games\War.cs" />
+    <Compile Include="Kernel.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="CySecurity\Gauntlet.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
